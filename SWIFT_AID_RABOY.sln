@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWIFT_AID_RABOY", "SWIFT_AID_RABOY\SWIFT_AID_RABOY.csproj", "{FC4F901E-AF62-41BE-AA76-80F23716DA5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary1\ClassLibrary.csproj", "{17DF95CE-0309-4DC3-82EA-6AFD3B81EAD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC4F901E-AF62-41BE-AA76-80F23716DA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4F901E-AF62-41BE-AA76-80F23716DA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4F901E-AF62-41BE-AA76-80F23716DA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4F901E-AF62-41BE-AA76-80F23716DA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DF95CE-0309-4DC3-82EA-6AFD3B81EAD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DF95CE-0309-4DC3-82EA-6AFD3B81EAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DF95CE-0309-4DC3-82EA-6AFD3B81EAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DF95CE-0309-4DC3-82EA-6AFD3B81EAD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {379AEB49-DF48-4CB3-9027-CD5A4C59C084}
+	EndGlobalSection
+EndGlobal
