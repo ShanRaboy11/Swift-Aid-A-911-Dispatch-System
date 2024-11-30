@@ -1,4 +1,4 @@
-﻿using Exception_Handling;
+using Exception_Handling;
 using Sources;
 using System.Data;
 using System.IO;
@@ -30,7 +30,7 @@ namespace FileHandling
             {
                 try
                 {               
-                    string[] boxLayout = File.ReadAllLines(@"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\box.txt");
+                    string[] boxLayout = File.ReadAllLines(AppContext.BaseDirectory + @"\Headers\box.txt");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.SetCursorPosition(100, 28);
                     Console.Write("<< ");
@@ -223,6 +223,7 @@ namespace FileHandling
                             }
                             catch (ArgumentException ex)
                             {
+                                Console.ForegroundColor = ConsoleColor.Red;
                                 Console.SetCursorPosition(83, n + 6);
                                 Console.WriteLine(ex.Message);
                                 Console.SetCursorPosition(60, n + 3);
@@ -613,8 +614,8 @@ namespace FileHandling
                     switch(ArchiveIncident)
                     {
                         case 1:
-                            filepath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Fire Incidents.txt";
-                            OriginalFilePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\fire incidents.txt";
+                            filepath = AppContext.BaseDirectory + @"\Archive\Fire Incidents.txt";
+                            OriginalFilePath = AppContext.BaseDirectory + @"\Incidents\fire incidents.txt";
 
                             Console.Clear();
                             if (!File.Exists(filepath))
@@ -648,8 +649,8 @@ namespace FileHandling
                             validArchive = false;
                             break;
                         case 2:
-                            filepath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Medical Incidents.txt";
-                            OriginalFilePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\medical incidents.txt";
+                            filepath = AppContext.BaseDirectory + @"\Archive\Medical Incidents.txt";
+                            OriginalFilePath = AppContext.BaseDirectory + @"\Incidents\medical incidents.txt";
 
                             Console.Clear();
                             if (!File.Exists(filepath))
@@ -683,9 +684,9 @@ namespace FileHandling
                             validArchive = false;
                             break;
                         case 3:
-                            filepath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Crime Incidents.txt";
-                            OriginalFilePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\crime incidents.txt";
-
+                            filepath = AppContext.BaseDirectory + @"\Archive\Crime Incidents.txt";
+                            OriginalFilePath = AppContext.BaseDirectory + @"\Incidents\crime incidents.txt";
+                            
                             Console.Clear();
                             if (!File.Exists(filepath))
                             {
@@ -718,9 +719,9 @@ namespace FileHandling
                             validArchive = false;
                             break;
                         case 4:
-                            firefile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Fire Incidents.txt";
-                            originalfirefile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\fire incidents.txt";
-
+                            firefile = AppContext.BaseDirectory + @"\Archive\Fire Incidents.txt";
+                            originalfirefile = AppContext.BaseDirectory + @"\Incidents\fire incidents.txt";
+                         
                             Console.Clear();
                             if (!File.Exists(firefile))
                             {
@@ -748,10 +749,10 @@ namespace FileHandling
                             if (File.Exists(originalfirefile))
                             {
                                 File.Delete(originalfirefile);
-                            }                            
+                            }
 
-                            medicalfile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Medical Incidents.txt";
-                            originalmedicalfile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\medical incidents.txt";
+                            medicalfile = AppContext.BaseDirectory + @"\Archive\Medical Incidents.txt";
+                            originalmedicalfile = AppContext.BaseDirectory + @"\Incidents\medical incidents.txt";
 
                             if (!File.Exists(medicalfile))
                             {
@@ -782,8 +783,8 @@ namespace FileHandling
                                 File.Delete(originalmedicalfile);
                             }
 
-                            crimefile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Archive\Crime Incidents.txt";
-                            originalcrimefile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\crime incidents.txt";
+                            crimefile = AppContext.BaseDirectory + @"\Archive\Crime Incidents.txt";
+                            originalcrimefile = AppContext.BaseDirectory + @"\Incidents\crime incidents.txt";
 
                             if (!File.Exists(crimefile))
                             {
@@ -855,7 +856,7 @@ namespace FileHandling
     {
         public int DataReading(string location1)
         {
-            string filePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\locations.txt";
+            string filePath = AppContext.BaseDirectory + @"\locations.txt";
             try
             {
                 using (StreamReader sr = new StreamReader(filePath))
@@ -883,7 +884,7 @@ namespace FileHandling
     {
         public int medicalEmergency(string emergencyname)
         {
-            string medicalfile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\medical emergency.txt";
+            string medicalfile = AppContext.BaseDirectory + @"\medical emergency.txt";
 
             try
             {
@@ -916,7 +917,7 @@ namespace FileHandling
     {
         public int crimeEmergency(string crimename)
         {
-            string crimefile = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\crime emergency.txt";
+            string crimefile = AppContext.BaseDirectory + @"\crime emergency.txt";
 
             try
             {
