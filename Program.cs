@@ -1,4 +1,4 @@
-﻿using UserInterface;
+using UserInterface;
 using Sources;
 using FileHandling;
 using System.ComponentModel.Design;
@@ -141,7 +141,6 @@ namespace SWIFT_AID_RABOY
             display.Header("box");
             Console.SetCursorPosition(53, 15);
             Console.ForegroundColor = ConsoleColor.Green;         
-            //Console.BackgroundColor = consoleColor2;           
             Console.WriteLine("What's your emergency? [ FIRE | MEDICAL | CRIME ]");
             while (validEmergency)
             {
@@ -466,7 +465,7 @@ namespace SWIFT_AID_RABOY
                         string relation = ErrorHandling.ReadLetterInput("");
                         if (incidentException.MedicalRelation(relation) == 1)
                         {
-                            throw new Exception("Invalid Input");
+                            throw new Exception("Invalid Input. Please provide your relation to the patient");
                         }                       
                         AddResponse(relation);
                         Console.SetCursorPosition(130, 23);
@@ -479,6 +478,7 @@ namespace SWIFT_AID_RABOY
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.SetCursorPosition(83, 54);
                         Console.WriteLine(ex.Message);
                         Console.SetCursorPosition(53, 49);
@@ -514,6 +514,7 @@ namespace SWIFT_AID_RABOY
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.SetCursorPosition(83, 54);
                         Console.WriteLine(ex.Message);
                         Console.SetCursorPosition(53, 49);
@@ -542,6 +543,7 @@ namespace SWIFT_AID_RABOY
                         }
                         catch (Exception ex)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             mainMenu.ClearConsoleLine(54);
                             mainMenu.ClearConsoleLine(55);
                             Console.SetCursorPosition(83, 54);
@@ -573,6 +575,7 @@ namespace SWIFT_AID_RABOY
                             }
                             catch (Exception ex)
                             {
+                                Console.ForegroundColor = ConsoleColor.Red;
                                 mainMenu.ClearConsoleLine(54);
                                 mainMenu.ClearConsoleLine(55);
                                 Console.SetCursorPosition(83, 54);
@@ -854,6 +857,7 @@ namespace SWIFT_AID_RABOY
                         }
                         catch (Exception ex)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             mainMenu.ClearConsoleLine(54);
                             mainMenu.ClearConsoleLine(55);
                             Console.SetCursorPosition(83, 54);
@@ -960,6 +964,7 @@ namespace SWIFT_AID_RABOY
                         }
                         catch (Exception ex)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             mainMenu.ClearConsoleLine(54);
                             mainMenu.ClearConsoleLine(55);
                             Console.SetCursorPosition(83, 54);
@@ -2168,8 +2173,6 @@ namespace SWIFT_AID_RABOY
                 Console.SetCursorPosition(53, 49);
                 Console.ForegroundColor = ConsoleColor.White;
                 await Task.Delay(5000);
-                //mainMenu.ClearConsoleLine(54);
-                //mainMenu.ClearConsoleLine(55);
             }
             else if(incident.ToLower() == "medical")
             {
