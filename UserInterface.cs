@@ -1,4 +1,4 @@
-﻿namespace UserInterface
+namespace UserInterface
 {
     public class EmergencyCallScreen
     {
@@ -124,7 +124,7 @@
     {
         public void IntroDisplay()
         {
-            string IncidentPath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\SWIFT AID.txt";
+            string IncidentPath = AppContext.BaseDirectory + @"\SWIFT AID.txt";
 
             try
             {
@@ -158,7 +158,7 @@
 
             // Borders and headers for UI
             string borderLine = new string('═', consoleWidth);
-            string header = "THANK YOU FOR USING SWIFTAID KEEP SAFE";
+            string header = "THANK YOU FOR USING SWIFT AID KEEP SAFE";
 
             int centeredHeaderLeft = (consoleWidth - header.Length) / 2;
             int centeredMessageTop = consoleHeight / 2;
@@ -184,63 +184,63 @@
         {
             if(word == "main")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\main header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\main header.txt";
             }
             else if(word == "emergency")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\emergency header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\emergency header.txt";
             }
             else if(word == "fire")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\fire header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\fire header.txt";
             }
             else if (word == "medical")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\medical header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\medical header.txt";
             }
             else if (word == "crime")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\crime header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\crime header.txt";
             }
             else if (word == "incident")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\incident header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\incident header.txt";
             }
             else if (word == "admin")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\admin header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\admin header.txt";
             }
             else if(word == "update")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\update header.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\update header.txt";
             }
             else if(word == "archive")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\archive.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\archive header.txt";
             }
             else if(word == "choice1")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\choice1.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\choice1.txt";
             }
             else if (word == "box")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\box.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\box.txt";
             }
             else if (word == "box1")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\box1.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\box1.txt";
             }
             else if (word == "adminchoice")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\adminchoice.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\adminchoice.txt";
             }
             else if (word == "incidentchoice")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\incident choice.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\incident choice.txt";
             }
             else if (word == "archive choice")
             {
-                HeaderName = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Headers\archive choice.txt";
+                HeaderName = AppContext.BaseDirectory + @"\Headers\archive choice.txt";
             }
 
 
