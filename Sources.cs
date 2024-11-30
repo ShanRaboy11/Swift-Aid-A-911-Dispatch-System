@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace Sources
 {
@@ -14,7 +15,6 @@ namespace Sources
         private List<string> incident = new List<string>();
         private List<string> response = new List<string>();
         public ConsoleColor consoleColor = ConsoleColor.White;
-        //public ConsoleColor consoleColor2 = ConsoleColor.Red;
 
         public List<string> Name
         {
@@ -77,18 +77,18 @@ namespace Sources
             string error = "Invalid Incident";
             if (incident.ToLower() == "fire")
             {
-                string filePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\fire incidents.txt";
+                string filePath = AppContext.BaseDirectory + @"\Incidents\fire incidents.txt";
                 return filePath;
 
             }
             else if (incident.ToLower() == "medical")
             {
-                string filePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\medical incidents.txt";
+                string filePath = AppContext.BaseDirectory + @"\Incidents\medical incidents.txt";
                 return filePath;
             }
             else if (incident.ToLower() == "crime")
             {
-                string filePath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Incidents\crime incidents.txt";
+                string filePath = AppContext.BaseDirectory + @"\Incidents\crime incidents.txt";
                 return filePath;
             }
             else
