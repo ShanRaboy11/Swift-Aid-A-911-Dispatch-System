@@ -38,7 +38,7 @@ namespace Exception_Handling
     {
         public int MedicalRelation(string medic)
         {
-            string relationPath = @"C:\Users\Shan Michael\OneDrive\文档\2nd Year 1st Sem\OOP\swift aid\Exception\relation.txt";
+            string relationPath = AppContext.BaseDirectory + @"\Exception\relation.txt";
             try
             {
                 using (StreamReader sr = new StreamReader(relationPath))
